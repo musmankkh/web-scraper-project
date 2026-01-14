@@ -56,17 +56,17 @@ try:
                 name_p = nd2h5g_div.find('p', class_='axDOAG zL1l9a deeUT2 NH5kAF')
                 if name_p:
                     name = name_p.get_text(strip=True).encode('utf-8', errors='ignore').decode('utf-8')
-                    print(f"Name: {name}")
+                    # print(f"Name: {name}")
                 
                 address_p = nd2h5g_div.find('p', class_='axDOAG TE8kwS DbgFmO deeUT2')
                 if address_p:
                     address = address_p.get_text(strip=True).encode('utf-8', errors='ignore').decode('utf-8')
-                    print(f"Address: {address}")
+                    # print(f"Address: {address}")
                 
                 rate_p = nd2h5g_div.find("p", class_="axDOAG VH00E7 eGBYyp SycVRT tWrves")
                 if rate_p:
                     rating = rate_p.get_text(strip=True)
-                    print(f"Rating: {rating}")
+                    # print(f"Rating: {rating}")
             
            
             
@@ -83,7 +83,7 @@ try:
             
             if venue_url:
                 try:
-                    print(f"Visiting venue page: {venue_url}")
+                    # print(f"Visiting venue page: {venue_url}")
                     driver.get(venue_url)
                     time.sleep(3)
                     
@@ -166,7 +166,7 @@ try:
                 col_letter = chr(65 + idx) if idx < 26 else chr(64 + idx // 26) + chr(65 + idx % 26)
                 worksheet.column_dimensions[col_letter].width = min(max_length, 50)
         
-        print(f"\n✓ Extracted {len(venues)} venues with opening times")
+        # print(f"\n✓ Extracted {len(venues)} venues with opening times")
         print(f"✓ Data saved to '{excel_filename}'")
     
     driver.quit()
