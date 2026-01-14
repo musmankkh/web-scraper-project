@@ -122,8 +122,7 @@ try:
             venues.append(venue_data)
     
     # Save to Excel
-    if venues:
-        max_services = max(len(v['services_prices']) for v in venues) if venues else 0
+
         
         # Prepare data for DataFrame with side-by-side format
         excel_data = []
